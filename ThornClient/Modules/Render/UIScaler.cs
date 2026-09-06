@@ -41,6 +41,7 @@ public class UIScaler : Module {
     /// <inheritdoc />
     protected override void OnEnable() {
         UpdateScale(Scale.Value);
+        UpdateHUDScale(HUDScale.Value);
         SceneUtils.SafeSceneLoaded += UpdateScale;
         Scale.OnValueChanged += UpdateScale;
         HUDScale.OnValueChanged += UpdateHUDScale;
@@ -75,6 +76,7 @@ public class UIScaler : Module {
 
     private void UpdateScale(Scene scene, LoadSceneMode mode) {
         UpdateScale(Scale.Value);
+        UpdateHUDScale(HUDScale.Value);
     }
 
     private void UpdateHUDScale(float value) {
