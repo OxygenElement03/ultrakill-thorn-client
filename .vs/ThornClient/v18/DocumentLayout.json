@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\crazs\\Documents\\GitHub\\ultrakill-thorn-client\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{231D445A-A1B5-4A38-BBED-01B9D3A823D8}|ThornClient\\ThornClient.csproj|c:\\users\\crazs\\documents\\github\\ultrakill-thorn-client\\thornclient\\modules\\render\\uiscaler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{231D445A-A1B5-4A38-BBED-01B9D3A823D8}|ThornClient\\ThornClient.csproj|solutionrelative:thornclient\\modules\\render\\uiscaler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UIScaler.cs",
+              "DocumentMoniker": "C:\\Users\\crazs\\Documents\\GitHub\\ultrakill-thorn-client\\ThornClient\\Modules\\Render\\UIScaler.cs",
+              "RelativeDocumentMoniker": "ThornClient\\Modules\\Render\\UIScaler.cs",
+              "ToolTip": "C:\\Users\\crazs\\Documents\\GitHub\\ultrakill-thorn-client\\ThornClient\\Modules\\Render\\UIScaler.cs",
+              "RelativeToolTip": "ThornClient\\Modules\\Render\\UIScaler.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAkwFcAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T13:24:48.841Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
