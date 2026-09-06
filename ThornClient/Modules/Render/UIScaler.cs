@@ -36,13 +36,14 @@ public class UIScaler : Module {
         ModuleCategory.Render) {
         Scale = CreateSetting("scale", "Scale", "Smaller = smaller UI elements", 1.0f);
         HUDScale = CreateSetting("hudscale", "HUD Scale", "Changes the size of the 3D HUD", 1.0f);
+        HUDScale.Hints = InterfaceHints.RangeHint(0.1f, 1.5f);
     }
 
     /// <inheritdoc />
     protected override void OnEnable() {
         UpdateScale(Scale.Value);
         UpdateHUDScale(HUDScale.Value);
-        SceneUtils.SafeSceneLoaded += UpdateScale;
+        SceneUtils.SafeSceneLoaded += UpdateAllScales;
         Scale.OnValueChanged += UpdateScale;
         HUDScale.OnValueChanged += UpdateHUDScale;
     }
@@ -74,7 +75,7 @@ public class UIScaler : Module {
         // I fucking hate working with screen sizes. Surely everyone plays on FHD in 2026.
     }
 
-    private void UpdateScale(Scene scene, LoadSceneMode mode) {
+    private void UpdateAllScales(Scene scene, LoadSceneMode mode) {
         UpdateScale(Scale.Value);
         UpdateHUDScale(HUDScale.Value);
     }
@@ -84,10 +85,8 @@ public class UIScaler : Module {
         var player = rootGameObjects.Where(obj => obj.name == "Player").FirstOrDefault();
         GameObject hud = player.FindRecursive("Main Camera/HUD Camera/HUD");
 
-        float clampedValue = Mathf.Clamp(value, 0.1f, 1.5f);
-
         if (hud == null) return;
-        hud.transform.localScale = new(clampedValue, clampedValue, 1);
+        hud.transform.localScale = new(value, value, 1);
     }
 
     /// <inheritdoc />
