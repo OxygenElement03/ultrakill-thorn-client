@@ -81,6 +81,7 @@ public class UIScaler : Module {
     }
 
     private void UpdateHUDScale(float value) {
+        if (!SceneUtils.IsSafe()) return;
         GameObject[] rootGameObjects = SceneManager.GetActiveScene().GetRootGameObjects();
         var player = rootGameObjects.Where(obj => obj.name == "Player").FirstOrDefault();
         GameObject hud = player.FindRecursive("Main Camera/HUD Camera/HUD");
