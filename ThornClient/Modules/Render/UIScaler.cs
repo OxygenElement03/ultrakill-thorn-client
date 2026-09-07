@@ -93,7 +93,7 @@ public class UIScaler : Module {
     protected override void OnDisable() {
         Scale.OnValueChanged -= UpdateScale;
         HUDScale.OnValueChanged -= UpdateHUDScale;
-        SceneUtils.SafeSceneLoaded -= UpdateScale;
+        SceneUtils.SafeSceneLoaded -= UpdateAllScales;
         UpdateScale(1f);
         UpdateHUDScale(1f);
     }
